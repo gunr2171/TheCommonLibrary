@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.Extensions", "TCL.Extensions\TCL.Extensions.csproj", "{135F21BF-E010-4793-9FA0-52B0D3493E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.Programs", "TCL.Programs\TCL.Programs.csproj", "{53D81755-A8B9-4B18-AF44-A069E9BEC510}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.DataAccess", "TCL.DataAccess\TCL.DataAccess.csproj", "{56FA7EDD-9AB6-49E5-B012-9EA756101DE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{135F21BF-E010-4793-9FA0-52B0D3493E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{135F21BF-E010-4793-9FA0-52B0D3493E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{135F21BF-E010-4793-9FA0-52B0D3493E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{135F21BF-E010-4793-9FA0-52B0D3493E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D81755-A8B9-4B18-AF44-A069E9BEC510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D81755-A8B9-4B18-AF44-A069E9BEC510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D81755-A8B9-4B18-AF44-A069E9BEC510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D81755-A8B9-4B18-AF44-A069E9BEC510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56FA7EDD-9AB6-49E5-B012-9EA756101DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56FA7EDD-9AB6-49E5-B012-9EA756101DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56FA7EDD-9AB6-49E5-B012-9EA756101DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56FA7EDD-9AB6-49E5-B012-9EA756101DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
