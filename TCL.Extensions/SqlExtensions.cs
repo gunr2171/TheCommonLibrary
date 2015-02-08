@@ -9,9 +9,16 @@ namespace TCL.Extensions
 {
     public static class SqlExtensions
     {
-        public static SqlParameterCollection AddParam(this SqlParameterCollection collection, string parameterName, object value)
+        public static void AddParam(this SqlParameterCollection collection, string parameterName, object value)
         {
-            if(valu)
+            if (value == null)
+            {
+                collection.AddWithValue(parameterName, DBNull.Value);
+            }
+            else
+            {
+                collection.AddWithValue(parameterName, value);
+            }
         }
     }
 }
