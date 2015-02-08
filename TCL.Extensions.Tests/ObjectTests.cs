@@ -2,7 +2,7 @@
 using System;
 using TCL.Extensions;
 
-namespace TCL.Tests.Extensions
+namespace TCL.Extensions.Tests
 {
     [TestFixture]
     public class ObjectTests

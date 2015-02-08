@@ -4,7 +4,7 @@ using TCL.Extensions;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace TCL.Tests.Extensions
+namespace TCL.Extensions.Tests
 {
     [TestFixture]
     public class EnumTests

@@ -43,6 +43,7 @@
     <Compile Include="BoolExtensions.cs" />
     <Compile Include="EnumExtensions.cs" />
     <Compile Include="ExceptionsExtensions.cs" />
+    <Compile Include="ExponentsHelper.cs" />
     <Compile Include="FullGenericsExtensions.cs" />
     <Compile Include="ICollectionExtensions.cs" />
     <Compile Include="IComparableExtensions.cs" />
