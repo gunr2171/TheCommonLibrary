@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.Extensions", "TCL.Exten
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.DataAccess", "TCL.DataAccess\TCL.DataAccess.csproj", "{56FA7EDD-9AB6-49E5-B012-9EA756101DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.DataAccess.Tests", "TCL.DataAccess.Tests\TCL.DataAccess.Tests.csproj", "{CD9E731C-3D97-4CDD-931B-2C8FE1A53CA4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.Extensions.Tests", "TCL.Extensions.Tests\TCL.Extensions.Tests.csproj", "{9096E29F-8C3C-4F25-851F-766125ABB43A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.CommandLine", "TCL.CommandLine\TCL.CommandLine.csproj", "{01FA9CF7-71B5-4053-8C2C-A7B087639EA9}"
@@ -38,10 +36,6 @@ Global
 		{56FA7EDD-9AB6-49E5-B012-9EA756101DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56FA7EDD-9AB6-49E5-B012-9EA756101DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56FA7EDD-9AB6-49E5-B012-9EA756101DE0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD9E731C-3D97-4CDD-931B-2C8FE1A53CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD9E731C-3D97-4CDD-931B-2C8FE1A53CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD9E731C-3D97-4CDD-931B-2C8FE1A53CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD9E731C-3D97-4CDD-931B-2C8FE1A53CA4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9096E29F-8C3C-4F25-851F-766125ABB43A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9096E29F-8C3C-4F25-851F-766125ABB43A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9096E29F-8C3C-4F25-851F-766125ABB43A}.Release|Any CPU.ActiveCfg = Release|Any CPU
