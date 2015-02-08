@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace TCL.Extensions
 {
+    /// <summary>
+    /// Extensions for any data type. The "this" parameter is a generic argument with
+    /// no or limited restrictions.
+    /// </summary>
     public static class FullGenericsExtensions
     {
         /// <summary>
@@ -23,7 +27,7 @@ namespace TCL.Extensions
         /// <summary>
         /// Returns true if the source object is contained within the list of arguments
         /// </summary>
-        /// <typeparam name="TSoruce"></typeparam>
+        /// <typeparam name="TSource"></typeparam>
         /// <param name="source"></param>
         /// <param name="list"></param>
         /// <returns></returns>

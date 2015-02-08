@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TCL.Extensions
 {
+    /// <summary>
+    /// Extensions for Exception objects.
+    /// </summary>
     public static class ExceptionsExtensions
     {
         /// <summary>
@@ -22,6 +25,7 @@ namespace TCL.Extensions
         /// Returns the exception's error message, along with all inner exception messages.
         /// </summary>
         /// <param name="ex"></param>
+        /// <param name="delimitor"></param>
         /// <returns></returns>
         public static string FullErrorMessage(this Exception ex, string delimitor)
         {

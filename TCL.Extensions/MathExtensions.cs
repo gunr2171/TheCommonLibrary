@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TCL.Extensions
 {
+    /// <summary>
+    /// Extensions for math-related data types.
+    /// </summary>
     public static class MathExtensions
     {
         /// <summary>

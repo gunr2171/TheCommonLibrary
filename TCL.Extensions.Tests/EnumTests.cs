@@ -11,7 +11,7 @@ namespace TCL.Extensions.Tests
     {
         public enum TestEnum
         {
-            [Obsolete()]
+            //[Obsolete()]
             [MyCool("my cool", 3)]
             Home,
 

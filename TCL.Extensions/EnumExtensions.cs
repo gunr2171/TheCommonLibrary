@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TCL.Extensions
 {
+    /// <summary>
+    /// Extensions for Enumerations.
+    /// </summary>
     public static class EnumExtensions
     {
         /// <summary>
