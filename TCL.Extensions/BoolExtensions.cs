@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TCL.Extensions
 {
+    /// <summary>
+    /// Extensions for booleans.
+    /// </summary>
     public static class BoolExtensions
     {
         /// <summary>

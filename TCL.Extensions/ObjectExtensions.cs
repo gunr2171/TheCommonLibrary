@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace TCL.Extensions
 {
+    /// <summary>
+    /// Extensions for objects.
+    /// </summary>
     public static class ObjectExtensions
     {
         /// <summary>
@@ -60,6 +63,14 @@ namespace TCL.Extensions
             return selector(value);
         }
 
+        /// <summary>
+        /// Gets an inner value from the object, or null if the object is null. Best used if the selector points to an internal property.
+        /// </summary>
+        /// <typeparam name="TValue"></typeparam>
+        /// <typeparam name="TReturn"></typeparam>
+        /// <param name="value"></param>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         public static TReturn InnerValueOrNull<TValue, TReturn>(this TValue value, Func<TValue, TReturn> selector)
             where TValue : class
             where TReturn : class

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TCL.Extensions
 {
+    /// <summary>
+    /// Extensions for IComparable objects.
+    /// </summary>
     public static class IComparableExtensions
     {
         /// <summary>

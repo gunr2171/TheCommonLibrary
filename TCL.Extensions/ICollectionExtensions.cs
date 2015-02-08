@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TCL.Extensions
 {
+    /// <summary>
+    /// Extensions for ICollection objects.
+    /// </summary>
     public static class ICollectionExtensions
     {
         /// <summary>

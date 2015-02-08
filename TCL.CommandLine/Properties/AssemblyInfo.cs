@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TCL.Programs")]
+[assembly: AssemblyTitle("TCL.CommandLine")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TCL.Programs")]
+[assembly: AssemblyProduct("TCL.CommandLine")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("29ea1134-baff-4449-bdba-41d07b602cd2")]
+[assembly: Guid("19322245-015e-46b5-b1c6-1a0d663d99c0")]
 
 // Version information for an assembly consists of the following four values:
 //

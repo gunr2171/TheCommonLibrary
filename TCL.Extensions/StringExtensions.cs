@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace TCL.Extensions
 {
+    /// <summary>
+    /// Extensions for strings.
+    /// </summary>
     public static class StringExtensions
     {
         /// <summary>
@@ -67,6 +70,12 @@ namespace TCL.Extensions
             return string.IsNullOrWhiteSpace(s);
         }
 
+        /// <summary>
+        /// Returns the left X characters from the string.
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="numChars"></param>
+        /// <returns></returns>
         public static string Left(this string s, int numChars)
         {
             if (s == null) throw new ArgumentNullException("s");
@@ -75,6 +84,12 @@ namespace TCL.Extensions
             return s.Substring(0, numChars);
         }
 
+        /// <summary>
+        /// Parses the string into any available data type, including nullables.
+        /// </summary>
+        /// <typeparam name="T">The data type to convert the string into.</typeparam>
+        /// <param name="value">The string to convert.</param>
+        /// <returns></returns>
         public static T Parse<T>(this string value)
         {
             // Get default value for type so if string

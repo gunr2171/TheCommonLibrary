@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TCL.Extensions
 {
+    /// <summary>
+    /// Extensions for IEnumerables.
+    /// </summary>
     public static class IEnumerableExtensions
     {
         /// <summary>
@@ -94,8 +97,8 @@ namespace TCL.Extensions
         /// <typeparam name="T"></typeparam>
         /// <param name="source"></param>
         /// <param name="condition"></param>
-        /// <param name="truePredicate">The predicate to preform if the condition is true.</param>
-        /// <param name="falsePredicate">The predicate to preform if the condition is false.</param>
+        /// <param name="truePredicate">The predicate to perform if the condition is true.</param>
+        /// <param name="falsePredicate">The predicate to perform if the condition is false.</param>
         /// <returns></returns>
         public static IEnumerable<T> WhereIf<T>(this IEnumerable<T> source, Func<T, bool> condition, Func<T, bool> truePredicate, Func<T, bool> falsePredicate)
         {
@@ -120,6 +123,13 @@ namespace TCL.Extensions
             }
         }
 
+        /// <summary>
+        /// Splits the IEnumerable into groups with a fixed size.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="chunkSize">When the IEnumerable is split, this will be the max size of each group.</param>
+        /// <returns></returns>
         public static IEnumerable<IEnumerable<T>> SplitByPartSize<T>(this IEnumerable<T> source, int chunkSize)
         {
             return source
@@ -128,6 +138,13 @@ namespace TCL.Extensions
                 .Take(chunkSize));
         }
 
+        /// <summary>
+        /// Splits the IEnumerable into a set number of groups.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <param name="parts">The number of groups to split the IEnumerable into.</param>
+        /// <returns></returns>
         public static IEnumerable<IEnumerable<T>> SplitByPartNumber<T>(this IEnumerable<T> list, int parts)
         {
             int i = 0;
