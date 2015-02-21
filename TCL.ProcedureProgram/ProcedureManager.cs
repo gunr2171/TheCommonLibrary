@@ -22,12 +22,12 @@ namespace TCL.ProcedureProgram
         {
             try
             {
-                var returnMessage = await procedure.IsCorrectForThisProcedureAsync(inputData, lm);
+                var returnMessage = await Task.Run(() => procedure.IsCorrectForThisProcedure(inputData, lm));
 
                 if (returnMessage == null)
-                    lm.AddUILogMessage("Foil is appropriate for procedure '{0}'".FormatInline(procedure.GetProcedureName()), UILoggingEntryType.Success);
+                    lm.AddUILogMessage("Data is appropriate for procedure '{0}'".FormatInline(procedure.GetProcedureName()), UILoggingEntryType.Success);
                 else
-                    lm.AddUILogMessage("Foil is not appropriate for procedure '{0}' for reason: {1}".FormatInline(procedure.GetProcedureName(), returnMessage), UILoggingEntryType.Warning);
+                    lm.AddUILogMessage("Data is not appropriate for procedure '{0}' for reason: {1}".FormatInline(procedure.GetProcedureName(), returnMessage), UILoggingEntryType.Warning);
 
                 return returnMessage == null;
             }
@@ -115,7 +115,7 @@ namespace TCL.ProcedureProgram
                 try
                 {
                     lm.AddUILogMessage("Beginning procedure", UILoggingEntryType.Header, true);
-                    await procedureToRun.RunProcedureAsync(inputData, lm);
+                    await Task.Run(() => procedureToRun.RunProcedure(inputData, lm));
                     lm.AddUILogMessage("Procedure completed", UILoggingEntryType.Success, true);
                 }
                 catch (Exception ex)

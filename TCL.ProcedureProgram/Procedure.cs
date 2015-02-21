@@ -18,9 +18,9 @@ namespace TCL.ProcedureProgram
         /// <param name="newFoilId"></param>
         /// <param name="wafermapFileContents"></param>
         /// <returns></returns>
-        public abstract Task<string> IsCorrectForThisProcedureAsync(TInputData inputData, LoggingManager lm);
+        public abstract string IsCorrectForThisProcedure(TInputData inputData, LoggingManager lm);
 
-        public abstract Task RunProcedureAsync(TInputData inputData, LoggingManager lm);
+        public abstract void RunProcedure(TInputData inputData, LoggingManager lm);
 
         public abstract string GetProcedureName();
     }

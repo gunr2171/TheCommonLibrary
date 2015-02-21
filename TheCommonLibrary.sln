@@ -11,14 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.Extensions.Tests", "TCL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.CommandLine", "TCL.CommandLine\TCL.CommandLine.csproj", "{01FA9CF7-71B5-4053-8C2C-A7B087639EA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TLC.ProcedureProgram", "TLC.ProcedureProgram\TLC.ProcedureProgram.csproj", "{2A8F864D-C450-4092-B3AF-982374556A9A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{39A31CF2-C7EF-4FA0-A2A9-405B10E18EB9}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.ProcedureProgram", "TCL.ProcedureProgram\TCL.ProcedureProgram.csproj", "{2A8F864D-C450-4092-B3AF-982374556A9A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.CommandLine.Example", "TCL.CommandLine.Example\TCL.CommandLine.Example.csproj", "{BD3FADDC-CD53-45C1-9ADF-F486E6E73E6F}"
 EndProject
