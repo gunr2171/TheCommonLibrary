@@ -13,7 +13,7 @@ using System.Diagnostics;
 
 namespace TCL.ProcedureProgram.FormControls
 {
-    public partial class frmProcedureInterface<TUserInputProvider, TInputData> : Form
+    internal partial class frmProcedureInterface<TUserInputProvider, TInputData> : Form
         where TUserInputProvider : UserInputProvider<TInputData>, new()
     {
         LoggingManager loggingManager;

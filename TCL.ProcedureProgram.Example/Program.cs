@@ -17,7 +17,7 @@ namespace TCL.ProcedureProgram.Example
         {
             //this object will run the procedure program
             //the generic types are used for determining what the user input is and how to parse it.
-            var runner = new ProcedureProgramRunner<UserInputProvider, InputData>("Example Procedure Program", null);
+            var runner = new ProcedureProgramRunner<UserInputProvider, InputData>("Example Procedure Program", "helpfile.html");
 
             //add in the procedures
             runner.AddProcedure<Procedure1>();

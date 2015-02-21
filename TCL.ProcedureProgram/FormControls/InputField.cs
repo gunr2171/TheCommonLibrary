@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TCL.ProcedureProgram.FormControls
 {
-    public partial class InputField : UserControl
+    internal partial class InputField : UserControl
     {
         public InputField()
         {
