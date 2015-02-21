@@ -151,7 +151,15 @@ namespace TCL.ProcedureProgram.FormControls
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            Process.Start(htmlHelpFilePath);
+            //only run the help file if the path is provided
+            if (!htmlHelpFilePath.IsNullOrWhiteSpace())
+            {
+                Process.Start(htmlHelpFilePath);
+            }
+            else
+            {
+                MessageBox.Show("No help file has been specified.");
+            }
         }
 
         private void btnOpenLogFolder_Click(object sender, EventArgs e)

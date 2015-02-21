@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2A8F864D-C450-4092-B3AF-982374556A9A}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{7EB9F7D1-946A-41CF-A997-A847EE4EFFEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TCL.ProcedureProgram</RootNamespace>
-    <AssemblyName>TCL.ProcedureProgram</AssemblyName>
+    <RootNamespace>TCL.ProcedureProgram.Example</RootNamespace>
+    <AssemblyName>TCL.ProcedureProgram.Example</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,9 +21,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\TCL.ProcedureProgram.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,56 +32,55 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ObjectListView">
-      <HintPath>..\packages\ObjectListView.Official.2.8.1\lib\net20\ObjectListView.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormControls\frmProcedureInterface.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormControls\frmProcedureInterface.designer.cs">
-      <DependentUpon>frmProcedureInterface.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormControls\InputField.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormControls\InputField.designer.cs">
-      <DependentUpon>InputField.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Logging\LoggingManager.cs" />
-    <Compile Include="Logging\UILoggingEntry.cs" />
-    <Compile Include="Procedure.cs" />
-    <Compile Include="ProcedureManager.cs" />
-    <Compile Include="ProcedureProgramRunner.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="InputData.cs" />
     <Compile Include="UserInputProvider.cs" />
+    <Compile Include="Procedure1.cs" />
+    <Compile Include="Procedure2.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormControls\frmProcedureInterface.resx">
-      <DependentUpon>frmProcedureInterface.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormControls\InputField.resx">
-      <DependentUpon>InputField.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TCL.Extensions\TCL.Extensions.csproj">
       <Project>{135f21bf-e010-4793-9fa0-52b0d3493e59}</Project>
       <Name>TCL.Extensions</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\TCL.ProcedureProgram\TCL.ProcedureProgram.csproj">
+      <Project>{2a8f864d-c450-4092-b3af-982374556a9a}</Project>
+      <Name>TCL.ProcedureProgram</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
