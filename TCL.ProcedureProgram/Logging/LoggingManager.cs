@@ -19,7 +19,7 @@ namespace TCL.ProcedureProgram.Logging
         private string logFileName;
         private int linesWritenToLogFile;
 
-        public LoggingManager(ObjectListView olvToReportTo)
+        internal LoggingManager(ObjectListView olvToReportTo)
         {
             reportingOLV = olvToReportTo;
             reportingOLV.FormatRow += reportingOLV_FormatRow;
@@ -44,13 +44,19 @@ namespace TCL.ProcedureProgram.Logging
             e.Item.ForeColor = colorData.FrontColor;
         }
 
-        public void ClearList()
+        internal void ClearList()
         {
             uiLoggingEntries = new List<UILoggingEntry>();
 
             RefreshOLV();
         }
 
+        /// <summary>
+        /// Adds a message to the UI log and optionally copies the message to the log file.
+        /// </summary>
+        /// <param name="message">The message to display.</param>
+        /// <param name="entryType">Describes the type of message.</param>
+        /// <param name="copyToFileLogging">If true then the message will be sent to the log file as well.</param>
         public void AddUILogMessage(string message, UILoggingEntryType entryType, bool copyToFileLogging)
         {
             uiLoggingEntries.Add(new UILoggingEntry()
@@ -65,11 +71,20 @@ namespace TCL.ProcedureProgram.Logging
             RefreshOLV();
         }
 
+        /// <summary>
+        /// Adds a message to the UI log.
+        /// </summary>
+        /// <param name="message">The message to display.</param>
+        /// <param name="entryType">Describes the type of message.</param>
         public void AddUILogMessage(string message, UILoggingEntryType entryType)
         {
             AddUILogMessage(message, entryType, false);
         }
 
+        /// <summary>
+        /// Adds a message to the log file.
+        /// </summary>
+        /// <param name="message">The message to write to the log file.</param>
         public void AddFileLogMessage(string message)
         {
             var logFilePath = Path.Combine("Logs", logFileName);

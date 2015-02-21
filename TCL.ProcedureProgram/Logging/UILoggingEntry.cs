@@ -31,12 +31,34 @@ namespace TCL.ProcedureProgram.Logging
         public Color FrontColor { get; set; }
     }
 
+    /// <summary>
+    /// Describes the type of message being sent to the UI.
+    /// </summary>
     public enum UILoggingEntryType
     {
+        /// <summary>
+        /// Standard information.
+        /// </summary>
         Information,
+
+        /// <summary>
+        /// Indicates a process was finished successfully or something good happened.
+        /// </summary>
         Success,
+
+        /// <summary>
+        /// Indicates that something completed but there were some problems.
+        /// </summary>
         Warning,
+
+        /// <summary>
+        /// Indicates that something failed to complete.
+        /// </summary>
         Error,
+
+        /// <summary>
+        /// This message is information that is used for formatting and starting a section of relivent output.
+        /// </summary>
         Header
     }
 }

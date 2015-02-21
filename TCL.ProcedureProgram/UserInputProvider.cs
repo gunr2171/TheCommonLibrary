@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace TCL.ProcedureProgram
 {
+    /// <summary>
+    /// Provides the list of user input fields and a way to convert those fields into the specified data object.
+    /// </summary>
+    /// <typeparam name="TInputData"></typeparam>
     public abstract class UserInputProvider<TInputData>
     {
         /// <summary>

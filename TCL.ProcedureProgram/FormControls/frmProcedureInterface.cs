@@ -13,7 +13,7 @@ using System.Diagnostics;
 
 namespace TCL.ProcedureProgram.FormControls
 {
-    public partial class frmProcedureInterface<TUserInputProvider, TInputData> : Form
+    internal partial class frmProcedureInterface<TUserInputProvider, TInputData> : Form
         where TUserInputProvider : UserInputProvider<TInputData>, new()
     {
         LoggingManager loggingManager;
@@ -151,7 +151,15 @@ namespace TCL.ProcedureProgram.FormControls
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            Process.Start(htmlHelpFilePath);
+            //only run the help file if the path is provided
+            if (!htmlHelpFilePath.IsNullOrWhiteSpace())
+            {
+                Process.Start(htmlHelpFilePath);
+            }
+            else
+            {
+                MessageBox.Show("No help file has been specified.");
+            }
         }
 
         private void btnOpenLogFolder_Click(object sender, EventArgs e)

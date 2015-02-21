@@ -8,7 +8,7 @@ using TCL.ProcedureProgram.Logging;
 
 namespace TCL.ProcedureProgram
 {
-    public class ProcedureManager<TInputData>
+    internal class ProcedureManager<TInputData>
     {
         private LoggingManager lm;
         private List<Procedure<TInputData>> allProcedures = new List<Procedure<TInputData>>();
