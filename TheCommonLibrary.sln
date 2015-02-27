@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.CommandLine.Example", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.ProcedureProgram.Example", "TCL.ProcedureProgram.Example\TCL.ProcedureProgram.Example.csproj", "{7EB9F7D1-946A-41CF-A997-A847EE4EFFEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.DataAccess.SMO", "TCL.DataAccess.SMO\TCL.DataAccess.SMO.csproj", "{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{7EB9F7D1-946A-41CF-A997-A847EE4EFFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EB9F7D1-946A-41CF-A997-A847EE4EFFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EB9F7D1-946A-41CF-A997-A847EE4EFFEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
