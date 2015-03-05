@@ -25,7 +25,7 @@ namespace TCL.ProcedureProgram.Example
         public override InputData ParseUserInput(Dictionary<string, string> rawInputs)
         {
             //this function needs to parse the inputs from the user and return your InputData object
-            
+
             //do input validation here (like simple "is this an integer")
             //but you need to throw an exception if something does not work. the calling
             //method will catch that exception and halt execution
@@ -36,9 +36,9 @@ namespace TCL.ProcedureProgram.Example
 
             //here I will check if any of the fields are empty and stop if there are
             var anyEmptyFields = rawInputs
-                .Any(x=> x.Value.IsNullOrWhiteSpace());
+                .Any(x => x.Value.IsNullOrWhiteSpace());
 
-            if(anyEmptyFields)
+            if (anyEmptyFields)
                 throw new Exception("All fields are required");
 
             return new InputData
