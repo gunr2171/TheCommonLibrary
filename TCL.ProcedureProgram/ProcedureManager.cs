@@ -43,12 +43,6 @@ namespace TCL.ProcedureProgram
             allProcedures.Add(new TProcedure());
         }
 
-        private async Task<bool> SomeTest()
-        {
-            await Task.Delay(1);
-            return false;
-        }
-
         /// <summary>
         /// Takes input data, determines which procedure to run, and optionally runs it.
         /// </summary>
