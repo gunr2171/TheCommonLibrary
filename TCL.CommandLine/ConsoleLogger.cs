@@ -58,18 +58,33 @@ namespace TCL.CommandLine
         /// </summary>
         public enum LogType
         {
+            /// <summary>
+            /// Standard message. Medium importance.
+            /// </summary>
             [LogColor(ConsoleColor.White)]
             Info,
 
+            /// <summary>
+            /// A message that contains additional information that is not that crucial. Mostly for high-tragic status updates.
+            /// </summary>
             [LogColor(ConsoleColor.Gray)]
             Detail,
 
+            /// <summary>
+            /// An error message, or something went wrong.
+            /// </summary>
             [LogColor(ConsoleColor.Red)]
             Error,
 
+            /// <summary>
+            /// A message indicating something happened outside the "norms", but was still handled.
+            /// </summary>
             [LogColor(ConsoleColor.Yellow)]
             Warning,
 
+            /// <summary>
+            /// A message indicating that a process was completed successfully.
+            /// </summary>
             [LogColor(ConsoleColor.Green)]
             Success,
         }
