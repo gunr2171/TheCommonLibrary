@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.Extensions.Packager", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.CommandLine.Packager", "TCL.CommandLine.Packager\TCL.CommandLine.Packager.csproj", "{9971394F-7229-4B4F-BAE7-2C59A627CAEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.DataAccess.Packager", "TCL.DataAccess.Packager\TCL.DataAccess.Packager.csproj", "{9A5252FD-CFCC-4666-B53A-902F4F2CD331}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +74,10 @@ Global
 		{9971394F-7229-4B4F-BAE7-2C59A627CAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9971394F-7229-4B4F-BAE7-2C59A627CAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9971394F-7229-4B4F-BAE7-2C59A627CAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A5252FD-CFCC-4666-B53A-902F4F2CD331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A5252FD-CFCC-4666-B53A-902F4F2CD331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A5252FD-CFCC-4666-B53A-902F4F2CD331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A5252FD-CFCC-4666-B53A-902F4F2CD331}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
