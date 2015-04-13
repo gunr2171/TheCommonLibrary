@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\TCL.DataAccess.SMO.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\TCL.DataAccess.SMO.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
@@ -52,6 +54,14 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set OutputDir=$(ProjectDir)..\TCL.DataAccess.SMO.Packager\lib\net45
+
+if not exist "%25OutputDir%25" mkdir "%25OutputDir%25"
+copy /y "$(TargetPath)" "$(ProjectDir)..\TCL.DataAccess.SMO.Packager\lib\net45\$(TargetFileName)"
+copy /y "$(TargetDir)TCL.DataAccess.SMO.pdb" "$(ProjectDir)..\TCL.DataAccess.SMO.Packager\lib\net45\TCL.DataAccess.SMO.pdb"
+copy /y "$(TargetDir)TCL.DataAccess.SMO.xml" "$(ProjectDir)..\TCL.DataAccess.SMO.Packager\lib\net45\TCL.DataAccess.SMO.xml"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
