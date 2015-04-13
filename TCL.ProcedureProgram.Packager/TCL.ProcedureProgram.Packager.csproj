@@ -83,4 +83,9 @@
     <Message Text="SUCCESS: Created package." Condition=" '$(Configuration)|$(Platform)|$(ExitCode)' == 'Debug|AnyCPU|0' " Importance="High" />
     <Message Text="SUCCESS: Published package." Condition=" '$(Configuration)|$(Platform)|$(ExitCode)' == 'Release|AnyCPU|0' " Importance="High" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>if not exist "$(ProjectDir)content" mkdir "$(ProjectDir)content"
+if not exist "$(ProjectDir)lib" mkdir "$(ProjectDir)lib"
+if not exist "$(ProjectDir)src" mkdir "$(ProjectDir)src"</PreBuildEvent>
+  </PropertyGroup>
 </Project>
