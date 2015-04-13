@@ -74,6 +74,9 @@ namespace TCL.CommandLine
             Success,
         }
 
+        /// <summary>
+        /// Used to store the font color for a particular LogType.
+        /// </summary>
         internal class LogColorAttribute : System.Attribute
         {
             public ConsoleColor TextColor { get; private set; }
