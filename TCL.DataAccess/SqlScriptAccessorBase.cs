@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace TCL.DataAccess
 {
+    /// <summary>
+    /// Base class for sql database connections which use a simple script for querying.
+    /// </summary>
     public abstract class SqlScriptAccessorBase : SqlAccessorBase
     {
         public SqlScriptAccessorBase(string cs) : base(cs) { }
