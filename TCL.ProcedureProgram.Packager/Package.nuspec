@@ -1,32 +1,28 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>TCL.ProcedureProgram.Packager</id>
+    <id>TCL.CommandLine</id>
     <version>1.0.0</version>
-    <title>TCL.ProcedureProgram.Packager</title>
-    <authors>hunterke</authors>
-    <owners>Information Technology</owners>
+    <title>The Common Library - Procedure Program</title>
+    <authors>Kevin Hunter</authors>
+    <owners>Kevin Hunter</owners>
     <description>
-      A long description of the package. This shows up in the right pane of the Add Package Dialog as well as in the Package Manager Console when listing packages using the Get-Package command.
+      Framework for creating a procedure-based winforms application. Simply define the user input and procedure listings, and the program will take care of the rest.
     </description>
     <releaseNotes>
     </releaseNotes>
     <summary>
-      A short description of the package. If specified, this shows up in the middle pane of the Add Package Dialog. If not specified, a truncated version of the description is used instead.
+      Framework for creating a procedure-based winforms application.
     </summary>
     <language>en-US</language>
-    <projectUrl>https://nuget.org/packages/TCL.ProcedureProgram.Packager</projectUrl>
-    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <projectUrl>http://app-exr1:9000/osram/the-common-library</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
-    <copyright>Copyright Information Technology 2015</copyright>
     <dependencies>
-        <group targetFramework="net40">
-          <dependency id="log4net" version="1.2.10" />
-        </group>
+      <group targetFramework="net45">
+        <dependency id="TCL.Extensions" version="1.0.0" />
+        <dependency id="ObjectListView.Official" version="2.8.1"/>
+      </group>
     </dependencies>
-    <references></references>
-    <tags>Information Technology</tags>
   </metadata>
   <files>
     <file src="lib\" target="lib" />
