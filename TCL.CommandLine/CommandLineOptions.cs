@@ -14,10 +14,10 @@ namespace TCL.CommandLine
     public abstract class CommandLineOptions
     {
         [ParserState]
-        public IParserState LastParserState { get; set; }
+        internal IParserState LastParserState { get; set; }
 
         [HelpOption]
-        public virtual string GetUsage()
+        internal virtual string GetUsage()
         {
             return HelpText.AutoBuild(this,
               (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current));
