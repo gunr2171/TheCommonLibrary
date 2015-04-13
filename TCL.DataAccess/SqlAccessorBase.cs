@@ -8,10 +8,20 @@ using System.Threading.Tasks;
 
 namespace TCL.DataAccess
 {
+    /// <summary>
+    /// Base class for any common connection to an sql database.
+    /// </summary>
     public abstract class SqlAccessorBase
     {
+        /// <summary>
+        /// Gets the connection string that will be used for the sql connection.
+        /// </summary>
         public string ConnectionString { get; private set; }
 
+        /// <summary>
+        /// Creates a new SqlAccessorBase object with the given connection string.
+        /// </summary>
+        /// <param name="cs"></param>
         public SqlAccessorBase(string cs)
         {
             if (string.IsNullOrWhiteSpace(cs))
@@ -20,14 +30,19 @@ namespace TCL.DataAccess
             ConnectionString = cs;
         }
 
+        /// <summary>
+        /// Use to configure the SqlCommand object before use.
+        /// </summary>
+        /// <param name="cmd">The SqlCommand object used for this request.</param>
+        /// <param name="value">The command value.</param>
         protected abstract void ConfigureSqlCommand(SqlCommand cmd, string value);
 
         /// <summary>
         /// Runs a script and uses the full dataset of what is returned.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="sqlScript"></param>
-        /// <param name="getResults"></param>
+        /// <typeparam name="T">The data type of the returned object.</typeparam>
+        /// <param name="value">The string to run on the server. What this is, is defined by higher classes.</param>
+        /// <param name="getResults">A function that takes the results of the query and converts it to the output data type.</param>
         /// <returns></returns>
         protected T RunCommand<T>(string value, Func<DataSet, T> getResults)
         {
@@ -70,11 +85,11 @@ namespace TCL.DataAccess
         }
 
         /// <summary>
-        /// Runs a script and uses the full dataset of what is returned.
+        /// Runs a script async and uses the full dataset of what is returned.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="sqlScript"></param>
-        /// <param name="getResults"></param>
+        /// <typeparam name="T">The data type of the returned object.</typeparam>
+        /// <param name="value">The string to run on the server. What this is, is defined by higher classes.</param>
+        /// <param name="getResults">A function that takes the results of the query and converts it to the output data type.</param>
         /// <returns></returns>
         protected async Task<T> RunCommandAsync<T>(string value, Func<DataSet, T> getResults)
         {
