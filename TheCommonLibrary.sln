@@ -25,12 +25,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.Extensions.Packager", "
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.CommandLine.Packager", "TCL.CommandLine.Packager\TCL.CommandLine.Packager.csproj", "{9971394F-7229-4B4F-BAE7-2C59A627CAEA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{01FA9CF7-71B5-4053-8C2C-A7B087639EA9} = {01FA9CF7-71B5-4053-8C2C-A7B087639EA9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.DataAccess.Packager", "TCL.DataAccess.Packager\TCL.DataAccess.Packager.csproj", "{9A5252FD-CFCC-4666-B53A-902F4F2CD331}"
+	ProjectSection(ProjectDependencies) = postProject
+		{56FA7EDD-9AB6-49E5-B012-9EA756101DE0} = {56FA7EDD-9AB6-49E5-B012-9EA756101DE0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.DataAccess.SMO.Packager", "TCL.DataAccess.SMO.Packager\TCL.DataAccess.SMO.Packager.csproj", "{8AC407B5-0662-45A6-BBBF-8C2557E2D6CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB} = {A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.ProcedureProgram.Packager", "TCL.ProcedureProgram.Packager\TCL.ProcedureProgram.Packager.csproj", "{BA036AB2-AB48-43CE-A3DA-E36717E14571}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A8F864D-C450-4092-B3AF-982374556A9A} = {2A8F864D-C450-4092-B3AF-982374556A9A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>TCL.CommandLine</id>
+    <id>TCL.DataAccess.SMO</id>
     <version>1.0.0</version>
     <title>The Common Library - Data Access SMO</title>
     <authors>Kevin Hunter</authors>
