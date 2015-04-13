@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\TCL.CommandLine.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -59,6 +60,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set OutputDir=$(ProjectDir)..\TCL.CommandLine.Packager\lib\net45
+
+if not exist "%25OutputDir%25" mkdir "%25OutputDir%25"
+copy /y "$(TargetPath)" "$(ProjectDir)..\TCL.CommandLine.Packager\lib\net45\$(TargetFileName)"
+copy /y "$(TargetDir)TCL.CommandLine.pdb" "$(ProjectDir)..\TCL.CommandLine.Packager\lib\net45\TCL.CommandLine.pdb"
+copy /y "$(TargetDir)TCL.CommandLine.xml" "$(ProjectDir)..\TCL.CommandLine.Packager\lib\net45\TCL.CommandLine.xml"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
