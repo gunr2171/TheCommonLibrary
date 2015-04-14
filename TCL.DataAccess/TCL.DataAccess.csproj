@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\TCL.DataAccess.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\TCL.DataAccess.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -44,6 +46,14 @@
     <Compile Include="SqlScriptAccessorBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set OutputDir=$(ProjectDir)..\TCL.DataAccess.Packager\lib\net45
+
+if not exist "%25OutputDir%25" mkdir "%25OutputDir%25"
+copy /y "$(TargetPath)" "$(ProjectDir)..\TCL.DataAccess.Packager\lib\net45\$(TargetFileName)"
+copy /y "$(TargetDir)TCL.DataAccess.pdb" "$(ProjectDir)..\TCL.DataAccess.Packager\lib\net45\TCL.DataAccess.pdb"
+copy /y "$(TargetDir)TCL.DataAccess.xml" "$(ProjectDir)..\TCL.DataAccess.Packager\lib\net45\TCL.DataAccess.xml"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

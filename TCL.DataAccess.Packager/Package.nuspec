@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TCL.DataAccess</id>
+    <version>1.0.0</version>
+    <title>The Common Library - Data Access</title>
+    <authors>Kevin Hunter</authors>
+    <owners>Kevin Hunter</owners>
+    <description>
+      Base classes to access Sql databases.
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      Base classes to access Sql databases.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>http://app-exr1:9000/osram/the-common-library</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />
+  </files>
+</package>

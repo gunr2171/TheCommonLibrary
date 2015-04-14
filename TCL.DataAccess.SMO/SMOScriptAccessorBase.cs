@@ -14,12 +14,17 @@ namespace TCL.DataAccess.SMO
     /// </summary>
     public abstract class SMOScriptAccessorBase : SqlScriptAccessorBase
     {
+        /// <summary>
+        /// Creates a new SMOScriptAccessorBase object with the given connection string.
+        /// </summary>
+        /// <param name="cs">The connection string to use in the database connection.</param>
         public SMOScriptAccessorBase(string cs) : base(cs) { }
 
         /// <summary>
         /// Runs the script with SMO, so that "GO" statements are recognized. However, you are not able to retrieve any results from the command.
         /// </summary>
-        /// <param name="sqlScript"></param>
+        /// <param name="sqlScript">The script to run on the server.</param>
+        /// <param name="useTransaction">If true, the script will be wrapped in a transaction.</param>
         protected void RunBatchScript(string sqlScript, bool useTransaction)
         {
             using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -48,6 +53,11 @@ namespace TCL.DataAccess.SMO
             }
         }
 
+        /// <summary>
+        /// Runs the script with SMO, so that "GO" statements are recognized. However, you are not able to retrieve any results from the command.
+        /// The script will be wrapped in a transaction and will be rolled back if an exception is thrown during execution.
+        /// </summary>
+        /// <param name="sqlScript">The script to run on the server.</param>
         protected void RunBatchScript(string sqlScript)
         {
             RunBatchScript(sqlScript, true);

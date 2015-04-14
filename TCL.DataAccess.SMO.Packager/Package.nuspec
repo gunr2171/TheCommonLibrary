@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TCL.DataAccess.SMO</id>
+    <version>1.0.0</version>
+    <title>The Common Library - Data Access SMO</title>
+    <authors>Kevin Hunter</authors>
+    <owners>Kevin Hunter</owners>
+    <description>
+      Base classes to connect to an Sql database using SMO. Useful for running migration scripts that include the "GO" batch separator.
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      Base classes to connect to an Sql database using SMO.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>http://app-exr1:9000/osram/the-common-library</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <group targetFramework="net45">
+        <dependency id="TCL.DataAccess" version="1.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />
+  </files>
+</package>

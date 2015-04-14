@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TCL.Extensions</id>
+    <version>1.0.0</version>
+    <title>The Common Library - Extensions</title>
+    <authors>Kevin Hunter</authors>
+    <owners>Kevin Hunter</owners>
+    <description>
+      A collection of common extension methods and other helpful methods. This package is used by almost every other TCL package.
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      Common extensions methods for use in projects.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>http://app-exr1:9000/osram/the-common-library</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />
+  </files>
+</package>

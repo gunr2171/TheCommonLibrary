@@ -14,9 +14,20 @@ namespace TCL.CommandLine
     public abstract class CommandLineProgram<TOptions>
         where TOptions : CommandLineOptions, new()
     {
+        /// <summary>
+        /// Method responsible for performing the logic for the program.
+        /// </summary>
+        /// <param name="options">The parsed options passed in from the command line arguments.</param>
+        /// <returns></returns>
         protected abstract int DoWork(TOptions options);
 
-        public int RunProgram(string[] args, bool suppressInternalLogging)
+        /// <summary>
+        /// Parses the command line arguments and runs the logic for the program.
+        /// </summary>
+        /// <param name="args">Raw command line arguments</param>
+        /// <param name="suppressInternalLogging">If true, logging by this framework will be disabled.</param>
+        /// <returns></returns>
+        internal int RunProgram(string[] args, bool suppressInternalLogging)
         {
             TOptions options = new TOptions();
             int doWorkExitCode;

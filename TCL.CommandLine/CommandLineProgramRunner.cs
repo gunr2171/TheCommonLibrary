@@ -9,6 +9,9 @@ using System.Diagnostics;
 
 namespace TCL.CommandLine
 {
+    /// <summary>
+    /// Main class for this assembly. Loads and runs a command line program based on generic augments given in its methods.
+    /// </summary>
     public static class CommandLineProgramRunner
     {
         /// <summary>

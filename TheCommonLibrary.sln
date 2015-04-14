@@ -19,6 +19,31 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.ProcedureProgram.Exampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.DataAccess.SMO", "TCL.DataAccess.SMO\TCL.DataAccess.SMO.csproj", "{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.Extensions.Packager", "TCL.Extensions.Packager\TCL.Extensions.Packager.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
+	ProjectSection(ProjectDependencies) = postProject
+		{135F21BF-E010-4793-9FA0-52B0D3493E59} = {135F21BF-E010-4793-9FA0-52B0D3493E59}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.CommandLine.Packager", "TCL.CommandLine.Packager\TCL.CommandLine.Packager.csproj", "{9971394F-7229-4B4F-BAE7-2C59A627CAEA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{01FA9CF7-71B5-4053-8C2C-A7B087639EA9} = {01FA9CF7-71B5-4053-8C2C-A7B087639EA9}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.DataAccess.Packager", "TCL.DataAccess.Packager\TCL.DataAccess.Packager.csproj", "{9A5252FD-CFCC-4666-B53A-902F4F2CD331}"
+	ProjectSection(ProjectDependencies) = postProject
+		{56FA7EDD-9AB6-49E5-B012-9EA756101DE0} = {56FA7EDD-9AB6-49E5-B012-9EA756101DE0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.DataAccess.SMO.Packager", "TCL.DataAccess.SMO.Packager\TCL.DataAccess.SMO.Packager.csproj", "{8AC407B5-0662-45A6-BBBF-8C2557E2D6CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB} = {A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCL.ProcedureProgram.Packager", "TCL.ProcedureProgram.Packager\TCL.ProcedureProgram.Packager.csproj", "{BA036AB2-AB48-43CE-A3DA-E36717E14571}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A8F864D-C450-4092-B3AF-982374556A9A} = {2A8F864D-C450-4092-B3AF-982374556A9A}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +82,26 @@ Global
 		{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A29A1F3A-C6B7-4CCF-89A7-A80D4EA4C5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9971394F-7229-4B4F-BAE7-2C59A627CAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9971394F-7229-4B4F-BAE7-2C59A627CAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9971394F-7229-4B4F-BAE7-2C59A627CAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9971394F-7229-4B4F-BAE7-2C59A627CAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A5252FD-CFCC-4666-B53A-902F4F2CD331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A5252FD-CFCC-4666-B53A-902F4F2CD331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A5252FD-CFCC-4666-B53A-902F4F2CD331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A5252FD-CFCC-4666-B53A-902F4F2CD331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AC407B5-0662-45A6-BBBF-8C2557E2D6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC407B5-0662-45A6-BBBF-8C2557E2D6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC407B5-0662-45A6-BBBF-8C2557E2D6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC407B5-0662-45A6-BBBF-8C2557E2D6CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA036AB2-AB48-43CE-A3DA-E36717E14571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA036AB2-AB48-43CE-A3DA-E36717E14571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA036AB2-AB48-43CE-A3DA-E36717E14571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA036AB2-AB48-43CE-A3DA-E36717E14571}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

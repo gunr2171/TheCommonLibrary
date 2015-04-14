@@ -29,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\TCL.Extensions.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -56,6 +57,14 @@
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set OutputDir=$(ProjectDir)..\TCL.Extensions.Packager\lib\net45
+
+if not exist "%25OutputDir%25" mkdir "%25OutputDir%25"
+copy /y "$(TargetPath)" "$(ProjectDir)..\TCL.Extensions.Packager\lib\net45\$(TargetFileName)"
+copy /y "$(TargetDir)TCL.Extensions.pdb" "$(ProjectDir)..\TCL.Extensions.Packager\lib\net45\TCL.Extensions.pdb"
+copy /y "$(TargetDir)TCL.Extensions.xml" "$(ProjectDir)..\TCL.Extensions.Packager\lib\net45\TCL.Extensions.xml"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
