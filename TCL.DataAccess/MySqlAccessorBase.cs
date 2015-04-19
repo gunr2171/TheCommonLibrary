@@ -1,7 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 namespace TCL.DataAccess
 {
     /// <summary>
-    /// Base class for any common connection to an MS Sql database.
+    /// Base class for any common connection to an MySql database.
     /// </summary>
-    public abstract class SqlAccessorBase
+    public abstract class MySqlAccessorBase
     {
         /// <summary>
-        /// Gets the connection string that will be used for the Sql connection.
+        /// Gets the connection string that will be used for the MySql connection.
         /// </summary>
         public string ConnectionString { get; private set; }
 
         /// <summary>
-        /// Creates a new SqlAccessorBase object with the given connection string.
+        /// Creates a new MySqlAccessorBase object with the given connection string.
         /// </summary>
         /// <param name="cs"></param>
-        public SqlAccessorBase(string cs)
+        public MySqlAccessorBase(string cs)
         {
             if (string.IsNullOrWhiteSpace(cs))
                 throw new ArgumentNullException("cs", "Connection string null or empty");
@@ -31,11 +31,11 @@ namespace TCL.DataAccess
         }
 
         /// <summary>
-        /// Use to configure the SqlCommand object before use.
+        /// Use to configure the MySqlCommand object before use.
         /// </summary>
-        /// <param name="cmd">The SqlCommand object used for this request.</param>
+        /// <param name="cmd">The MySqlCommand object used for this request.</param>
         /// <param name="value">The command value.</param>
-        protected abstract void ConfigureSqlCommand(SqlCommand cmd, string value);
+        protected abstract void ConfigureMySqlCommand(MySqlCommand cmd, string value);
 
         /// <summary>
         /// Runs a script and uses the full dataset of what is returned.
@@ -48,20 +48,20 @@ namespace TCL.DataAccess
         {
             using (DataSet ds = new DataSet())
             {
-                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                using (MySqlConnection conn = new MySqlConnection(ConnectionString))
                 {
                     conn.Open();
-                    using (SqlTransaction trans = conn.BeginTransaction())
+                    using (MySqlTransaction trans = conn.BeginTransaction())
                     {
                         try
                         {
-                            using (SqlCommand cmd = conn.CreateCommand())
+                            using (MySqlCommand cmd = conn.CreateCommand())
                             {
                                 cmd.Transaction = trans;
 
-                                ConfigureSqlCommand(cmd, value);
+                                ConfigureMySqlCommand(cmd, value);
 
-                                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                                using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
                                 {
                                     da.Fill(ds);
                                 }
