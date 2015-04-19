@@ -62,7 +62,6 @@
 
 if not exist "%25OutputDir%25" mkdir "%25OutputDir%25"
 copy /y "$(TargetPath)" "$(ProjectDir)..\TCL.Extensions.Packager\lib\net45\$(TargetFileName)"
-copy /y "$(TargetDir)TCL.Extensions.pdb" "$(ProjectDir)..\TCL.Extensions.Packager\lib\net45\TCL.Extensions.pdb"
 copy /y "$(TargetDir)TCL.Extensions.xml" "$(ProjectDir)..\TCL.Extensions.Packager\lib\net45\TCL.Extensions.xml"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

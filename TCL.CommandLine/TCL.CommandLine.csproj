@@ -66,7 +66,6 @@
 
 if not exist "%25OutputDir%25" mkdir "%25OutputDir%25"
 copy /y "$(TargetPath)" "$(ProjectDir)..\TCL.CommandLine.Packager\lib\net45\$(TargetFileName)"
-copy /y "$(TargetDir)TCL.CommandLine.pdb" "$(ProjectDir)..\TCL.CommandLine.Packager\lib\net45\TCL.CommandLine.pdb"
 copy /y "$(TargetDir)TCL.CommandLine.xml" "$(ProjectDir)..\TCL.CommandLine.Packager\lib\net45\TCL.CommandLine.xml"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

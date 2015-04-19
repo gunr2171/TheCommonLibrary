@@ -59,7 +59,6 @@
 
 if not exist "%25OutputDir%25" mkdir "%25OutputDir%25"
 copy /y "$(TargetPath)" "$(ProjectDir)..\TCL.DataAccess.SMO.Packager\lib\net45\$(TargetFileName)"
-copy /y "$(TargetDir)TCL.DataAccess.SMO.pdb" "$(ProjectDir)..\TCL.DataAccess.SMO.Packager\lib\net45\TCL.DataAccess.SMO.pdb"
 copy /y "$(TargetDir)TCL.DataAccess.SMO.xml" "$(ProjectDir)..\TCL.DataAccess.SMO.Packager\lib\net45\TCL.DataAccess.SMO.xml"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
