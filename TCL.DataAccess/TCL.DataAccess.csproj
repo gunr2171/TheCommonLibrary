@@ -32,9 +32,15 @@
     <DocumentationFile>bin\Release\TCL.DataAccess.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>..\packages\Npgsql.2.2.5\lib\net45\Mono.Security.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MySql.Data.6.9.6\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.2.2.5\lib\net45\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,15 +55,15 @@
     <Compile Include="MsSql\SqlScriptAccessorBase.cs" />
     <Compile Include="MySql\MySqlAccessorBase.cs" />
     <Compile Include="MySql\MySqlScriptAccessorBase.cs" />
+    <Compile Include="Postgres\PostgreSqlAccessorBase.cs" />
+    <Compile Include="Postgres\PostgreSqlScriptAccessorBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Postgres\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>set OutputDir=$(ProjectDir)..\TCL.DataAccess.Packager\lib\net45
