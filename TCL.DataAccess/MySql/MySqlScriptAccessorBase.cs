@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TCL.DataAccess
+namespace TCL.DataAccess.MySql
 {
     /// <summary>
     /// Base class for MySql database connections which use a simple script for querying.

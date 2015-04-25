@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TCL.DataAccess
+namespace TCL.DataAccess.MsSql
 {
     /// <summary>
     /// Base class for any common connection to an MS Sql database.
