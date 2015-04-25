@@ -51,10 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MsSql\Extensions.cs" />
     <Compile Include="MsSql\SqlAccessorBase.cs" />
     <Compile Include="MsSql\SqlScriptAccessorBase.cs" />
+    <Compile Include="MySql\Extensions.cs" />
     <Compile Include="MySql\MySqlAccessorBase.cs" />
     <Compile Include="MySql\MySqlScriptAccessorBase.cs" />
+    <Compile Include="Postgres\Extensions.cs" />
     <Compile Include="Postgres\PostgreSqlAccessorBase.cs" />
     <Compile Include="Postgres\PostgreSqlScriptAccessorBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
