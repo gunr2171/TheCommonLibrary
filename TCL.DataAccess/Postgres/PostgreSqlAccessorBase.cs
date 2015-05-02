@@ -1,28 +1,28 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TCL.DataAccess
+namespace TCL.DataAccess.Postgres
 {
     /// <summary>
-    /// Base class for any common connection to an MS Sql database.
+    /// Base class for any common connection to an Postgres database.
     /// </summary>
-    public abstract class SqlAccessorBase
+    public abstract class PostgresAccessorBase
     {
         /// <summary>
-        /// Gets the connection string that will be used for the Sql connection.
+        /// Gets the connection string that will be used for the Postgres connection.
         /// </summary>
         public string ConnectionString { get; private set; }
 
         /// <summary>
-        /// Creates a new SqlAccessorBase object with the given connection string.
+        /// Creates a new PostgresAccessorBase object with the given connection string.
         /// </summary>
         /// <param name="cs"></param>
-        public SqlAccessorBase(string cs)
+        public PostgresAccessorBase(string cs)
         {
             if (string.IsNullOrWhiteSpace(cs))
                 throw new ArgumentNullException("cs", "Connection string null or empty");
@@ -31,11 +31,11 @@ namespace TCL.DataAccess
         }
 
         /// <summary>
-        /// Use to configure the SqlCommand object before use.
+        /// Use to configure the PostgresCommand object before use.
         /// </summary>
-        /// <param name="cmd">The SqlCommand object used for this request.</param>
+        /// <param name="cmd">The PostgresCommand object used for this request.</param>
         /// <param name="value">The command value.</param>
-        protected abstract void ConfigureSqlCommand(SqlCommand cmd, string value);
+        protected abstract void ConfigurePostgresCommand(NpgsqlCommand cmd, string value);
 
         /// <summary>
         /// Runs a script and uses the full dataset of what is returned.
@@ -48,20 +48,20 @@ namespace TCL.DataAccess
         {
             using (DataSet ds = new DataSet())
             {
-                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                using (var conn = new NpgsqlConnection(ConnectionString))
                 {
                     conn.Open();
-                    using (SqlTransaction trans = conn.BeginTransaction())
+                    using (NpgsqlTransaction trans = conn.BeginTransaction())
                     {
                         try
                         {
-                            using (SqlCommand cmd = conn.CreateCommand())
+                            using (NpgsqlCommand cmd = conn.CreateCommand())
                             {
                                 cmd.Transaction = trans;
 
-                                ConfigureSqlCommand(cmd, value);
+                                ConfigurePostgresCommand(cmd, value);
 
-                                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                                using (NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd))
                                 {
                                     da.Fill(ds);
                                 }

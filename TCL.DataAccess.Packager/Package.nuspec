@@ -18,6 +18,10 @@
     <projectUrl>http://app-exr1:9000/osram/the-common-library</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
+      <group targetFramework="net45">
+        <dependency id="MySql.Data" version="6.9.6" />
+        <dependency id="Npgsql" version="2.2.5" />
+      </group>
     </dependencies>
   </metadata>
   <files>
